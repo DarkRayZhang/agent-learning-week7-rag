@@ -737,6 +737,87 @@ ToolCallAdvisor（order 更小，在最外）
   - Java Key 是否走环境变量（application.yml 引用 `${DEEPSEEK_API_KEY}`）？
 - 空白页测验结果（Java 重写提醒工具 + ChatClient 最小链路）：
 
+## 09-29（周二晚）· 作品集收口：把 W7 拆成两个仓库并推上 GitHub
+
+> 原排：**09-29 晚 1h** = README + push 主线；**09-30 晚 1.5h** = RAG README + push + 周检查。
+> 实际今晚**两件都做完了**（自报可用 2h+）→ 09-30 晚可专心留给周检查 + 复盘。
+
+### 结果
+
+| 仓库 | 内容 | 提交 |
+|---|---|---|
+| [agent-learning-week7-assistant-java](https://github.com/DarkRayZhang/agent-learning-week7-assistant-java) | 主线：Spring AI 效率助手（16 文件 / 1736 行） | `b4703e7` + `21c961b` |
+| [agent-learning-week7-rag](https://github.com/DarkRayZhang/agent-learning-week7-rag) | 卫星：优化版 RAG（23 文件 / 4161 行） | `4be3f33` |
+
+两个都 public；`pre-push-check.ps1` **双 PASS**（用子进程方式跑才拿得到输出，见 ⑥）。
+
+### ① 「clone 即跑」是要专门修的，不是"理所当然"
+
+README 快写完才发现：`application.yml` 只写了
+`spring.config.import: optional:file:../.env[.properties]` ——
+**一旦 `java/` 变成仓库根，`../.env` 就指到仓库外面去了** → 别人 clone 下来根本填不进 Key。
+
+修法：**两个路径都写，靠后的优先**。
+
+```yaml
+import: optional:file:../.env[.properties],optional:file:.env[.properties]
+```
+
+📌 **教训**：**"在我机器上能跑"和"交出去能跑"是两件事**。
+   后者要多问一句：**换一个根目录，还有哪些相对路径会断？**
+   同族实例：卫星侧 `sys.path.insert(.., "week5")` → 必须在 README 写明
+   「**本仓库不是独立可跑的**，week5 得放同级目录」。
+
+### ② `kb-vectors.json`（2.1 MB）该不该入库 → **该**
+
+它是 `searchKb` 的检索底库，`KbIndex` 找不到就**主动抛异常**（不静默降级）。
+而生成它的 `probes/export_kb_vectors.py` 依赖本机 `week5/chroma_db`（**未公开**）
+→ 不带它 = **clone 下来一启动就炸**。
+
+📌 判据沿用 week5：「**可再生产物**」才排除；「重新生成需 API key + 网络」的不算零成本。
+   卫星侧的 `query_vec_cache.json`（444 KB）按同一条判据**保留入库**，
+   理由写在该仓库 `.gitignore` 的注释里（不然半年后看到会以为是误提交）。
+
+### ③ ⚠️ 我写 README 里的「真实运行日志」时，是**凭印象写的**（同族第 4 次）
+
+按记忆把样例写成 `Q:` 在前、advisor 轨迹在后，还顺手编了一句
+「已经帮你记下了 ✅」—— 而真实日志是：
+
+- `demo()` **先 `call()`、后 `println`** → **轨迹在 `Q:` 之前**；
+- 原文是「已经帮你记下来了：**交周报 — 明天上午9点** ✅」。
+
+修法：把 `/tmp/jarun6.log` 逐段读出来对，顺序 / 措辞 / 数值全部照抄，
+并在 README 加一行说明「**为什么 Q 印在轨迹后面**」（否则读者会以为日志错乱）。
+
+📌 **这是 09-28 晚三连之后的同一模式第 4 次** ——
+   前三次是「**没查就下结论**」，这次是「**没读就引证**」：
+   **把"我记得"当成了"我看到了"。**
+   合并进同一条规矩：写「实测 / 真实运行」之前，**手上必须有那份原始读数**；
+   拿不出来，就把标题从「真实运行」改成「示意」。
+
+### ④ 顺手发现：`.env.example` 的占位写法会踩自己的快检
+
+`pre-push-check.ps1` 的密钥正则含 `sk-[A-Za-z0-9]{16,}`，
+我写了 32 个 x → 被判 **FAIL（误报）**。改回 week5/week6 的 `sk-xxxx`（4 个字符）。
+
+📌 **没去放宽脚本**：豁免 `.env.example` 会漏掉「**真 Key 误写进模板**」这种情况 ——
+   宁可让模板迁就检查，也不让检查出现空白区。
+
+### ⑤ 仓库结构：`week7/` 从根仓库摘出来了
+
+根仓库（`G:\agent学习`，本地资产仓库、**无 remote**）此前也跟踪着 `week7/` 的 5 个文件
+→ 与 week7 自己的仓库**重复**。已 `git rm --cached -rf week7` + 加进根 `.gitignore`（只动索引，磁盘未动）。
+
+⚠️ **同类重复 week2~week6 还在**（各自是独立仓库，根仓库又跟踪了一份），**尚未清理**。
+
+### ⑥ 两个环境坑（记下来免得再踩）
+
+- **`pre-push-check.ps1` 不能用 `& "路径\脚本.ps1"` 直接调** ——
+  脚本里有 `Set-Location`，直接调用后**静默无输出**（`$LASTEXITCODE` 为空）。
+  → 用子进程：`& powershell.exe -NoProfile -ExecutionPolicy Bypass -File <脚本> -RepoPath <仓库>`。
+- **PowerShell 输出仍抓不到** → 老办法：`Out-File -Encoding utf8` 写文件再读
+  （`Tee-Object` 会写 UTF-16，Read 工具拒读）。
+
 ## 本周复盘（3 句话）
 - 收获：
 - 卡点：
