@@ -142,7 +142,7 @@ week7/golden_set.py     →  golden_set.json    30 题评测集
 | `eval_recall.py` + `eval_recall_result.txt` | 实验 2：hit@k / recall@k / MRR 三口径 + 上限列 |
 | `golden_set.py` / `golden_set.json` | 30 题评测集（25 有参考答案 + 5 拒答） |
 | `hybrid_rerank.py` + `hybrid_rerank_result.txt` | 实验 3：rerank 与 BM25+RRF |
-| `blank-rerank.py` / `blank-rrf.py` | **留空的默写版**（先自己敲一遍，再对照成品） |
+| `blank-rerank.py` / `blank-rrf.py` | **空白页默写版** —— 闭卷独立填写（2026-09-27），各带 `__main__` 自检断言；实跑**均通过** |
 | `*任务卡.md` | 每个实验的**做法与判据**（怎么选关键短语、怎么定位失败） |
 | `rrf-语法详解.md` | RRF 逐行拆解 + **Java 对照** |
 | `query_vec_cache.json` | 30 条 query 的 embedding 缓存（**刻意入库**，见 `.gitignore` 注释） |
