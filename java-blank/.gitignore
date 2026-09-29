@@ -1,0 +1,17 @@
+# 构建产物
+target/
+*.class
+
+# classpath 导出（绝对路径，不入库）
+cp.txt
+
+# 日志
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# ⚠️ 不忽略 `.mvn/jvm.config` —— 它是项目配置（-Dfile.encoding=UTF-8）
+.mvn/wrapper/maven-wrapper.jar

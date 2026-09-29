@@ -146,6 +146,7 @@ week7/golden_set.py     →  golden_set.json    30 题评测集
 | `*任务卡.md` | 每个实验的**做法与判据**（怎么选关键短语、怎么定位失败） |
 | `rrf-语法详解.md` | RRF 逐行拆解 + **Java 对照** |
 | `query_vec_cache.json` | 30 条 query 的 embedding 缓存（**刻意入库**，见 `.gitignore` 注释） |
+| `java-blank/` | **空白页测验脚手架**（W7 周测验第二部分）—— 只有 `pom.xml` / `application.yml` / `.mvn`，两个 Java 文件留空待手写；见该目录 `任务卡-空白页测验.md` |
 | `notes.md` | 本周全量笔记（含 Java 主线部分） |
 
 > ⚠️ **判据地基**：切块实验的判定用的是「关键短语是否为块文本的子串」。
