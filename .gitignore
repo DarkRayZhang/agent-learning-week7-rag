@@ -12,10 +12,13 @@ __pycache__/
 .ipynb_checkpoints/
 
 # ── 独立成仓的子项目 ──
-# java/ 是本周**主线**，有自己的仓库与提交历史：
+# `java/` 是本周**主线**，有自己的仓库与提交历史：
 #   https://github.com/DarkRayZhang/agent-learning-week7-assistant-java
 # 不排除它的话，`git add -A` 会把它当 gitlink（一个无 .gitmodules 的悬空指针）。
-java/
+# ⚠️ **必须写成 `/java/`（带前导斜杠 = 锚定到仓库根）** —— 2026-09-29 实测踩坑：
+#    写成 `java/` 时 git 会把它当成**任意层级**的 `java` 目录 → 连
+#    `java-blank/src/main/java/` 也被吞掉，**两个 .java 答卷文件静默不入库**。
+/java/
 
 # ── 一个刻意保留的"缓存"──
 # `query_vec_cache.json`（444 KB）是 golden set 里 30 条 query 的 embedding 结果。
