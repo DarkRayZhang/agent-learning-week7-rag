@@ -1,0 +1,716 @@
+[
+  {
+    "num": 1,
+    "query": "周报什么时候交",
+    "keywords": [
+      "每周五 17:00 前提交",
+      "交周报"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_002.md",
+      "doc_020.md",
+      "doc_025.md",
+      "doc_029.md",
+      "doc_031.md",
+      "doc_048.md",
+      "doc_050.md",
+      "doc_052.md",
+      "doc_057.md",
+      "doc_083.md",
+      "doc_099.md"
+    ],
+    "n_relevant": 11
+  },
+  {
+    "num": 2,
+    "query": "会议纪要多久发出来",
+    "keywords": [
+      "会议纪要 24 小时内发出"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_001.md",
+      "doc_012.md",
+      "doc_015.md",
+      "doc_020.md",
+      "doc_021.md",
+      "doc_025.md",
+      "doc_029.md",
+      "doc_031.md",
+      "doc_047.md",
+      "doc_048.md",
+      "doc_050.md",
+      "doc_051.md",
+      "doc_075.md",
+      "doc_076.md",
+      "doc_079.md",
+      "doc_085.md",
+      "doc_091.md",
+      "doc_099.md",
+      "doc_100.md"
+    ],
+    "n_relevant": 19
+  },
+  {
+    "num": 3,
+    "query": "代码评审会什么时候开",
+    "keywords": [
+      "每周三 15:00"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_012.md",
+      "doc_018.md",
+      "doc_021.md",
+      "doc_025.md",
+      "doc_029.md",
+      "doc_033.md",
+      "doc_037.md",
+      "doc_038.md",
+      "doc_043.md",
+      "doc_047.md",
+      "doc_048.md",
+      "doc_071.md",
+      "doc_072.md",
+      "doc_076.md",
+      "doc_081.md",
+      "doc_083.md",
+      "doc_085.md",
+      "doc_096.md",
+      "doc_100.md"
+    ],
+    "n_relevant": 19
+  },
+  {
+    "num": 4,
+    "query": "发版前必须确认什么",
+    "keywords": [
+      "回滚方案和影响范围"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_002.md",
+      "doc_014.md",
+      "doc_017.md",
+      "doc_035.md",
+      "doc_036.md",
+      "doc_043.md",
+      "doc_053.md",
+      "doc_055.md",
+      "doc_059.md",
+      "doc_062.md",
+      "doc_079.md",
+      "doc_081.md",
+      "doc_082.md",
+      "doc_084.md",
+      "doc_090.md",
+      "doc_097.md"
+    ],
+    "n_relevant": 16
+  },
+  {
+    "num": 5,
+    "query": "灰度怎么放量",
+    "keywords": [
+      "先放 1% 流量"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_001.md",
+      "doc_017.md",
+      "doc_034.md",
+      "doc_036.md",
+      "doc_038.md",
+      "doc_039.md",
+      "doc_049.md",
+      "doc_056.md",
+      "doc_059.md",
+      "doc_060.md",
+      "doc_062.md",
+      "doc_065.md",
+      "doc_066.md",
+      "doc_067.md",
+      "doc_069.md",
+      "doc_082.md",
+      "doc_086.md",
+      "doc_089.md",
+      "doc_094.md",
+      "doc_095.md",
+      "doc_097.md"
+    ],
+    "n_relevant": 21
+  },
+  {
+    "num": 6,
+    "query": "事故复盘要产出什么",
+    "keywords": [
+      "时间线、根因、可落地的改进项及负责人"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_001.md",
+      "doc_017.md",
+      "doc_023.md",
+      "doc_028.md",
+      "doc_034.md",
+      "doc_035.md",
+      "doc_041.md",
+      "doc_054.md",
+      "doc_056.md",
+      "doc_062.md",
+      "doc_063.md",
+      "doc_067.md",
+      "doc_070.md",
+      "doc_079.md",
+      "doc_082.md",
+      "doc_086.md",
+      "doc_097.md",
+      "doc_100.md"
+    ],
+    "n_relevant": 18
+  },
+  {
+    "num": 7,
+    "query": "变更评审有什么底线",
+    "keywords": [
+      "改的人不能审自己的变更"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_002.md",
+      "doc_014.md",
+      "doc_023.md",
+      "doc_028.md",
+      "doc_039.md",
+      "doc_049.md",
+      "doc_059.md",
+      "doc_063.md",
+      "doc_065.md",
+      "doc_066.md",
+      "doc_067.md",
+      "doc_069.md",
+      "doc_070.md",
+      "doc_086.md",
+      "doc_089.md",
+      "doc_090.md",
+      "doc_094.md",
+      "doc_100.md"
+    ],
+    "n_relevant": 18
+  },
+  {
+    "num": 8,
+    "query": "监控告警的时效要求",
+    "keywords": [
+      "异常 5 分钟内要触发告警"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_002.md",
+      "doc_023.md",
+      "doc_028.md",
+      "doc_043.md",
+      "doc_056.md",
+      "doc_059.md",
+      "doc_060.md",
+      "doc_081.md",
+      "doc_084.md"
+    ],
+    "n_relevant": 9
+  },
+  {
+    "num": 9,
+    "query": "健康检查接口为什么必须加",
+    "keywords": [
+      "会把还没起来的实例也算进负载"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_003.md",
+      "doc_009.md",
+      "doc_011.md",
+      "doc_024.md",
+      "doc_026.md",
+      "doc_030.md",
+      "doc_032.md",
+      "doc_041.md",
+      "doc_044.md",
+      "doc_054.md",
+      "doc_059.md",
+      "doc_061.md",
+      "doc_065.md",
+      "doc_078.md"
+    ],
+    "n_relevant": 14
+  },
+  {
+    "num": 10,
+    "query": "什么情况该用警告级别",
+    "keywords": [
+      "可以自动重试或降级恢复"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_009.md",
+      "doc_011.md",
+      "doc_019.md",
+      "doc_022.md",
+      "doc_024.md",
+      "doc_025.md",
+      "doc_030.md",
+      "doc_041.md",
+      "doc_042.md",
+      "doc_044.md",
+      "doc_052.md",
+      "doc_059.md"
+    ],
+    "n_relevant": 12
+  },
+  {
+    "num": 11,
+    "query": "数据库备份保留多久",
+    "keywords": [
+      "保留周期 30 天"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_003.md",
+      "doc_005.md",
+      "doc_022.md",
+      "doc_023.md",
+      "doc_030.md",
+      "doc_032.md",
+      "doc_041.md",
+      "doc_052.md",
+      "doc_054.md",
+      "doc_070.md",
+      "doc_073.md",
+      "doc_097.md",
+      "doc_098.md"
+    ],
+    "n_relevant": 13
+  },
+  {
+    "num": 12,
+    "query": "幂等键放在哪",
+    "keywords": [
+      "幂等键放在请求头里"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_003.md",
+      "doc_009.md",
+      "doc_010.md",
+      "doc_013.md",
+      "doc_015.md",
+      "doc_019.md",
+      "doc_022.md",
+      "doc_026.md",
+      "doc_042.md",
+      "doc_044.md",
+      "doc_052.md",
+      "doc_065.md",
+      "doc_070.md",
+      "doc_080.md",
+      "doc_094.md"
+    ],
+    "n_relevant": 15
+  },
+  {
+    "num": 13,
+    "query": "缓存穿透怎么处理",
+    "keywords": [
+      "查不到的数据也要缓存一个空值"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_005.md",
+      "doc_010.md",
+      "doc_013.md",
+      "doc_032.md",
+      "doc_042.md",
+      "doc_046.md",
+      "doc_054.md",
+      "doc_065.md",
+      "doc_078.md",
+      "doc_080.md",
+      "doc_094.md",
+      "doc_097.md"
+    ],
+    "n_relevant": 12
+  },
+  {
+    "num": 14,
+    "query": "睡眠目标是什么",
+    "keywords": [
+      "目标 23:30 前躺下"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_006.md",
+      "doc_008.md",
+      "doc_040.md",
+      "doc_049.md",
+      "doc_050.md",
+      "doc_053.md",
+      "doc_062.md",
+      "doc_074.md",
+      "doc_077.md",
+      "doc_078.md",
+      "doc_086.md",
+      "doc_089.md",
+      "doc_093.md",
+      "doc_096.md",
+      "doc_098.md"
+    ],
+    "n_relevant": 15
+  },
+  {
+    "num": 15,
+    "query": "久坐怎么缓解",
+    "keywords": [
+      "每工作 50 分钟起来活动 5 分钟"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_013.md",
+      "doc_024.md",
+      "doc_040.md",
+      "doc_046.md",
+      "doc_049.md",
+      "doc_053.md",
+      "doc_058.md",
+      "doc_069.md",
+      "doc_078.md",
+      "doc_087.md",
+      "doc_089.md",
+      "doc_092.md",
+      "doc_096.md"
+    ],
+    "n_relevant": 13
+  },
+  {
+    "num": 16,
+    "query": "护照有效期要求",
+    "keywords": [
+      "护照有效期必须剩 6 个月以上"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_014.md",
+      "doc_016.md",
+      "doc_018.md",
+      "doc_034.md",
+      "doc_036.md",
+      "doc_051.md",
+      "doc_055.md",
+      "doc_060.md",
+      "doc_061.md",
+      "doc_064.md",
+      "doc_066.md",
+      "doc_072.md",
+      "doc_083.md",
+      "doc_090.md",
+      "doc_091.md",
+      "doc_093.md"
+    ],
+    "n_relevant": 16
+  },
+  {
+    "num": 17,
+    "query": "酒店怎么选",
+    "keywords": [
+      "选地铁站 800 米以内的"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_011.md",
+      "doc_040.md",
+      "doc_051.md",
+      "doc_055.md",
+      "doc_056.md",
+      "doc_057.md",
+      "doc_060.md",
+      "doc_063.md",
+      "doc_066.md",
+      "doc_067.md",
+      "doc_071.md",
+      "doc_072.md",
+      "doc_076.md",
+      "doc_083.md",
+      "doc_088.md",
+      "doc_090.md"
+    ],
+    "n_relevant": 16
+  },
+  {
+    "num": 18,
+    "query": "述职材料怎么写",
+    "keywords": [
+      "要拿数据说话"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_008.md",
+      "doc_012.md",
+      "doc_015.md",
+      "doc_033.md",
+      "doc_038.md",
+      "doc_050.md",
+      "doc_057.md",
+      "doc_071.md",
+      "doc_075.md",
+      "doc_076.md",
+      "doc_079.md",
+      "doc_085.md",
+      "doc_091.md"
+    ],
+    "n_relevant": 13
+  },
+  {
+    "num": 19,
+    "query": "空调滤网多久洗一次",
+    "keywords": [
+      "空调滤网每月洗一次"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_004.md",
+      "doc_010.md",
+      "doc_019.md",
+      "doc_026.md",
+      "doc_042.md",
+      "doc_068.md",
+      "doc_073.md",
+      "doc_080.md",
+      "doc_087.md",
+      "doc_095.md"
+    ],
+    "n_relevant": 10
+  },
+  {
+    "num": 20,
+    "query": "生鲜什么时候买",
+    "keywords": [
+      "每周六上午去菜市场"
+    ],
+    "category": "正常",
+    "relevant": [
+      "doc_006.md",
+      "doc_007.md",
+      "doc_016.md",
+      "doc_019.md",
+      "doc_021.md",
+      "doc_030.md",
+      "doc_031.md",
+      "doc_035.md",
+      "doc_037.md",
+      "doc_045.md",
+      "doc_077.md",
+      "doc_080.md",
+      "doc_087.md",
+      "doc_095.md"
+    ],
+    "n_relevant": 14
+  },
+  {
+    "num": 21,
+    "query": "感冒了怎么办、平时怎么防",
+    "keywords": [
+      "常备退烧、止痛、肠胃药",
+      "抗生素必须凭处方购买"
+    ],
+    "category": "多跳",
+    "relevant": [
+      "doc_007.md",
+      "doc_022.md",
+      "doc_029.md",
+      "doc_031.md",
+      "doc_033.md",
+      "doc_035.md",
+      "doc_042.md",
+      "doc_074.md",
+      "doc_077.md",
+      "doc_080.md",
+      "doc_085.md"
+    ],
+    "n_relevant": 11
+  },
+  {
+    "num": 22,
+    "query": "眼睛不舒服怎么办",
+    "keywords": [
+      "遵守 20-20-20 规则",
+      "不要长期用去红血丝的眼药水"
+    ],
+    "category": "多跳",
+    "relevant": [
+      "doc_007.md",
+      "doc_013.md",
+      "doc_039.md",
+      "doc_049.md",
+      "doc_050.md",
+      "doc_053.md",
+      "doc_058.md",
+      "doc_068.md",
+      "doc_069.md",
+      "doc_077.md",
+      "doc_078.md",
+      "doc_084.md",
+      "doc_087.md",
+      "doc_088.md",
+      "doc_089.md",
+      "doc_093.md"
+    ],
+    "n_relevant": 16
+  },
+  {
+    "num": 23,
+    "query": "出差有哪些注意事项",
+    "keywords": [
+      "发票必须当月交",
+      "托运行李里不要放锂电池和充电宝"
+    ],
+    "category": "多跳",
+    "relevant": [
+      "doc_009.md",
+      "doc_014.md",
+      "doc_016.md",
+      "doc_018.md",
+      "doc_020.md",
+      "doc_027.md",
+      "doc_028.md",
+      "doc_034.md",
+      "doc_036.md",
+      "doc_040.md",
+      "doc_045.md",
+      "doc_048.md",
+      "doc_051.md",
+      "doc_055.md",
+      "doc_063.md",
+      "doc_064.md",
+      "doc_067.md",
+      "doc_071.md",
+      "doc_082.md",
+      "doc_088.md",
+      "doc_093.md",
+      "doc_099.md"
+    ],
+    "n_relevant": 22
+  },
+  {
+    "num": 24,
+    "query": "怎么写好一次变更",
+    "keywords": [
+      "每次生产变更都要有人复核",
+      "紧急变更可以先上线后补单"
+    ],
+    "category": "多跳",
+    "relevant": [
+      "doc_002.md",
+      "doc_014.md",
+      "doc_023.md",
+      "doc_028.md",
+      "doc_039.md",
+      "doc_049.md",
+      "doc_059.md",
+      "doc_063.md",
+      "doc_065.md",
+      "doc_066.md",
+      "doc_067.md",
+      "doc_069.md",
+      "doc_070.md",
+      "doc_086.md",
+      "doc_089.md",
+      "doc_090.md",
+      "doc_094.md",
+      "doc_100.md"
+    ],
+    "n_relevant": 18
+  },
+  {
+    "num": 25,
+    "query": "跑步怎么保护膝盖",
+    "keywords": [
+      "膝盖有不适就换成游泳或骑车",
+      "跑鞋跑到 600 公里左右就该换"
+    ],
+    "category": "多跳",
+    "relevant": [
+      "doc_003.md",
+      "doc_004.md",
+      "doc_007.md",
+      "doc_012.md",
+      "doc_024.md",
+      "doc_046.md",
+      "doc_047.md",
+      "doc_049.md",
+      "doc_058.md",
+      "doc_062.md",
+      "doc_068.md",
+      "doc_069.md",
+      "doc_074.md",
+      "doc_086.md",
+      "doc_089.md",
+      "doc_092.md",
+      "doc_093.md"
+    ],
+    "n_relevant": 17
+  },
+  {
+    "num": 26,
+    "query": "量子纠缠的原理是什么",
+    "keywords": [
+      "量子纠缠",
+      "波函数坍缩"
+    ],
+    "category": "拒答",
+    "relevant": [],
+    "n_relevant": 0
+  },
+  {
+    "num": 27,
+    "query": "怎么申请公积金贷款",
+    "keywords": [
+      "公积金贷款",
+      "首付比例"
+    ],
+    "category": "拒答",
+    "relevant": [],
+    "n_relevant": 0
+  },
+  {
+    "num": 28,
+    "query": "公司组织架构是什么样",
+    "keywords": [
+      "组织架构",
+      "汇报关系"
+    ],
+    "category": "拒答",
+    "relevant": [],
+    "n_relevant": 0
+  },
+  {
+    "num": 29,
+    "query": "世界杯冠军是哪支球队",
+    "keywords": [
+      "世界杯冠军",
+      "决赛比分"
+    ],
+    "category": "拒答",
+    "relevant": [],
+    "n_relevant": 0
+  },
+  {
+    "num": 30,
+    "query": "怎么给孩子做辅食",
+    "keywords": [
+      "辅食食谱",
+      "辅食机"
+    ],
+    "category": "拒答",
+    "relevant": [],
+    "n_relevant": 0
+  }
+]

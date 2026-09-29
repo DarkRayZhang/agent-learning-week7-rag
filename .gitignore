@@ -1,0 +1,25 @@
+# 环境变量（含 Key，绝不进库）
+.env
+.env.local
+
+# Python 虚拟环境（本仓库没有自己的 venv，脚本用 week5 的）
+.venv/
+venv/
+
+# 缓存 / 编译产物
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ── 独立成仓的子项目 ──
+# java/ 是本周**主线**，有自己的仓库与提交历史：
+#   https://github.com/DarkRayZhang/agent-learning-week7-assistant-java
+# 不排除它的话，`git add -A` 会把它当 gitlink（一个无 .gitmodules 的悬空指针）。
+java/
+
+# ── 一个刻意保留的"缓存"──
+# `query_vec_cache.json`（444 KB）是 golden set 里 30 条 query 的 embedding 结果。
+# 它虽名为 cache，但按 week5 立下的判据 —— **「可再生产物」才排除，重新生成
+# 需 API key + 网络的不算零成本** —— 所以**保留入库**：
+# 这样 eval_recall.py 报出来的读数（hit@k / MRR）别人才复查得了。
+# 另见 week5/.gitignore 里对 `docs/sample_retrieval.json` 的同款判断。

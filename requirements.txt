@@ -1,0 +1,8 @@
+# Week 7 依赖
+# 卫星 RAG 优化（Python 侧）
+chromadb
+openai
+python-dotenv
+# 可选：BM25 混合检索
+rank-bm25
+# Java 侧依赖见 week7/java/assistant-java/pom.xml（Spring AI）
