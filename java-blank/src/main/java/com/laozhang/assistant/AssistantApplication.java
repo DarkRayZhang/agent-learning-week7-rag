@@ -1,5 +1,12 @@
 package com.laozhang.assistant;
 
+import com.laozhang.assistant.tool.AssistantTools;
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
 // ══════════════════════════════════════════════════════════════════════
 //  ★ 空白页测验 · 第二题：模型调用最小链路
 // ══════════════════════════════════════════════════════════════════════
@@ -25,3 +32,31 @@ package com.laozhang.assistant;
 //   [ ] 拿到了 `.content()`（文本），不是整个 response 对象被 toString
 //   [ ] `main` 只有一个，且 `@SpringBootApplication` 在**能被扫描到的包**里
 // ══════════════════════════════════════════════════════════════════════
+@SpringBootApplication
+public class AssistantApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(AssistantApplication.class, args);
+    }
+
+
+
+    @Bean
+    public CommandLineRunner chat(ChatClient.Builder builder, AssistantTools tools) {
+        return args ->  {
+            ChatClient chatClient = builder.build();
+            String[] questions = new String[]{
+                    "提醒我明天上午9点交周报。",
+                    "再帮我记一条：后天下午3点开周会。",
+                    "我的备忘里有没有关于发布值班的内容？"};
+            for(String question : questions) {
+                String content = chatClient.prompt().user(question).tools(AssistantTools.class).call().content();
+                System.out.println("Q: " + question);
+                System.out.println("A: " + content);
+                System.out.println("────────────");
+            }
+        };
+    }
+
+
+}

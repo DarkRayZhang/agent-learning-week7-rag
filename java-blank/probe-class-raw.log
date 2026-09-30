@@ -1,0 +1,90 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.laozhang:assistant-java-blank >------------------
+[INFO] Building assistant-java-blank 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ assistant-java-blank >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ assistant-java-blank ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ assistant-java-blank ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ assistant-java-blank ---
+[INFO] skip non existing resourceDirectory G:\agent瀛︿範\week7\.clsprobe\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ assistant-java-blank ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ assistant-java-blank <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ assistant-java-blank ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-29T21:25:29.684+08:00  INFO 32528 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Starting AssistantApplication using Java 17.0.20 with PID 32528 (G:\agent瀛︿範\week7\.clsprobe\target\classes started by w in G:\agent瀛︿範\week7\.clsprobe)
+2026-09-29T21:25:29.687+08:00 DEBUG 32528 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-29T21:25:29.688+08:00  INFO 32528 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T21:25:30.371+08:00 DEBUG 32528 --- [assistant-java] [           main] o.s.a.m.t.a.ToolCallingAutoConfiguration : Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-09-29T21:25:31.649+08:00  INFO 32528 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Started AssistantApplication in 2.478 seconds (process running for 2.969)
+2026-09-29T21:25:31.657+08:00  INFO 32528 --- [assistant-java] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-29T21:25:31.675+08:00 ERROR 32528 --- [assistant-java] [           main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: No @Tool annotated methods found in class com.laozhang.assistant.tool.AssistantTools. Did you mean to pass a ToolCallback or ToolCallbackProvider? If so, use .tools(toolCallback) or .toolCallbacks(toolCallback) instead.
+	at org.springframework.ai.tool.method.MethodToolCallbackProvider.assertToolAnnotatedMethodsPresent(MethodToolCallbackProvider.java:78) ~[spring-ai-model-2.0.1.jar:2.0.1]
+	at org.springframework.ai.tool.method.MethodToolCallbackProvider.<init>(MethodToolCallbackProvider.java:62) ~[spring-ai-model-2.0.1.jar:2.0.1]
+	at org.springframework.ai.tool.method.MethodToolCallbackProvider$Builder.build(MethodToolCallbackProvider.java:157) ~[spring-ai-model-2.0.1.jar:2.0.1]
+	at org.springframework.ai.support.ToolCallbacks.from(ToolCallbacks.java:34) ~[spring-ai-model-2.0.1.jar:2.0.1]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultChatClientRequestSpec.tools(DefaultChatClient.java:1068) ~[spring-ai-client-chat-2.0.1.jar:2.0.1]
+	at com.laozhang.assistant.AssistantApplication.lambda$chat$0(AssistantApplication.java:53) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.laozhang.assistant.AssistantApplication.main(AssistantApplication.java:39) ~[classes/:na]
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.356 s
+[INFO] Finished at: 2026-09-29T21:25:31+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.1.1:run (default-cli) on project assistant-java-blank: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+EXIT=1

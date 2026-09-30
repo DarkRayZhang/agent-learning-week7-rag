@@ -1,0 +1,79 @@
+?[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.laozhang:assistant-java-blank >------------------
+[INFO] Building assistant-java-blank 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ assistant-java-blank >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ assistant-java-blank ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ assistant-java-blank ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ assistant-java-blank ---
+[INFO] skip non existing resourceDirectory G:\agent学习\week7\java-blank\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ assistant-java-blank ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ assistant-java-blank <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ assistant-java-blank ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-29T21:16:54.516+08:00  INFO 29924 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Starting AssistantApplication using Java 17.0.20 with PID 29924 (G:\agent学习\week7\java-blank\target\classes started by w in G:\agent学习\week7\java-blank)
+2026-09-29T21:16:54.519+08:00 DEBUG 29924 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-29T21:16:54.520+08:00  INFO 29924 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T21:16:55.079+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.m.t.a.ToolCallingAutoConfiguration : Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-09-29T21:16:55.844+08:00  INFO 29924 --- [assistant-java] [           main] c.l.assistant.AssistantApplication       : Started AssistantApplication in 1.725 seconds (process running for 2.188)
+2026-09-29T21:16:57.922+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.m.tool.DefaultToolCallingManager   : Executing tool call: addReminder
+2026-09-29T21:16:57.924+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Starting execution of tool: addReminder
+2026-09-29T21:16:57.940+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Successful execution of tool: addReminder
+2026-09-29T21:16:57.941+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.t.e.DefaultToolCallResultConverter : Converting tool result to JSON.
+Q: 提醒我明天上�?点交周报�?
+A: 已经�?��记下了：**交周�?* —�??明天上午 9 点�??
+�?要�?明一下：这条�?��登�?在提醒列表里，到点不会自动弹窗或响铃，所以明天上午你�?��还是得自己留意一下�?��?不�?我再�?��加一条今天的备忘，提醒你睡前�??�?下？
+�?�?�?�?�?�?�?�?�?�?�?�?
+2026-09-29T21:17:00.149+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.m.tool.DefaultToolCallingManager   : Executing tool call: getCurrentTime
+2026-09-29T21:17:00.149+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Starting execution of tool: getCurrentTime
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Successful execution of tool: getCurrentTime
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.t.e.DefaultToolCallResultConverter : Converting tool result to JSON.
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.m.tool.DefaultToolCallingManager   : Executing tool call: addReminder
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Starting execution of tool: addReminder
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.ai.tool.method.MethodToolCallback    : Successful execution of tool: addReminder
+2026-09-29T21:17:00.150+08:00 DEBUG 29924 --- [assistant-java] [           main] o.s.a.t.e.DefaultToolCallResultConverter : Converting tool result to JSON.
+Q: 再帮我�?�?条：后天下午3点开周会�?
+A: 已经�?��记好�?�?
+- **内�?**：开周会
+- **时间**：后天（2026�?0�?日）下午3�?- �?��列表里共 2 条提�?
+小提示：这条�?��登�?在提醒列表里，到点不会自动弹窗提醒你，需要的话可以自己再设个闹钟哦～
+�?�?�?�?�?�?�?�?�?�?�?�?
+Q: 我的备忘里有没有关于发布值班的内容？
+A: 我没有查询�?忘列表的功能—�?�我这边�?��**新�?**提醒、查当前时间、做算术计算，没法�?取或�?�?��已有的�?忘内容�?�所以关�?发布值班"这条，我暂时看不到，也就没法�??有没有�??
+几个�??的办法：
+
+1. **你自己翻�?�?*手机/应用里的备忘列表，确认有没有"发布值班"相关的�?录�??2. **如果�?��新加�?�?*，告诉我具体内�?（比�?发布值班�?）和时间（比�?明天上午10�?），我帮你登记进来�??3. 如果你只�?��让我**顺着这个关键词加�?条提�?*，也�?��直接说�??
+�?要我�?��记一条吗�?
+�?�?�?�?�?�?�?�?�?�?�?�?
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.615 s
+[INFO] Finished at: 2026-09-29T21:17:03+08:00
+[INFO] ------------------------------------------------------------------------
+EXIT=0
